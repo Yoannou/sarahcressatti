@@ -10,25 +10,97 @@
     </head>
 
     <body>
-        <div class="left-margin"></div>
         <nav>
+            <div class="nav-left">SC</div>
             <div class="about-div"><a href="">About Me</a></div>
             <div class="laywers-div"><a href="">Our Services</a></div>
             <div class="contact-div"><a href="">Contact</a></div>
+            <div class="nav-right"><ion-icon name="call-sharp"></ion-icon><p class="telephone">416-650-1011</p></div>
         </nav>
         <header>
             <div class="sarah">
                 <div class="logo-div">SC</div>
                 <div class="name-div">
                     <h1 class="sarahcressatti">Sarah Cressatti</h1>
-                    <h2 class="tagline">Professional lawyer and friend</h2>
+                    <h3 class="tagline">Professional lawyer and friend</h3>
                 </div>
             </div>
+            <div class="overview">
+                <p>With over five-hundred fucking years of experience, I am an expert of the Law.
+                    My clients love me and write me nice letters. We get along very nicely.
+                    I hope you come seek my services. I am very good at them, you will not be
+                    dissapointed one bit! I'm a master of Law.
+                </p>
+            </div>
         </header>
-        <div class="container">
-            <h1>ABOUT ME</h1>
-            <img src="img/id_sarah_cressatti.jpg" alt="sarah">
-        </div>
-        <div class="right-margin"></div>
+        <section class="section-about">
+            <div class="about-card">
+                <div class="about-description">
+                    <h2 class="about-heading"><span>ABOUT</span></h2>
+                    <p>I am a fucking rockstar of the Law. Nobody I know has anything bad to say
+                        about me and my work, and neither will you. Trusting in me is essential.
+                        With my skillset at your disposal anything is possible. I have so much
+                        experience bro. Come in for an appointment.
+                    </p>
+                </div>
+                <div class="image-holder">
+                    <img id="sarah-image" src="img/id_sarah_cressatti.jpg" alt="sarah">
+                </div>
+            </div>
+        </section>
+        <section class="section-services">
+            <h2><span class="services-heading">SERVICES</span></h2>
+            <div class="services-wrapper">
+                <div class="service notary-public">
+                    <h3>Notary public</h3>
+                    <img src="icons/notary.svg" alt="notary icon">
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dapibus ante eu posuere lacinia. Cras a vehicula velit. Nam sapien ligula, porta et interdum ut, consectetur ut ipsum. Vestibulum facilisis congue nibh, eget efficitur purus auctor vel. Aliquam erat volutpat. </p>
+                </div>
+                <div class="service power-of-attorny">
+                    <h3>Power of attorny</h3>
+                    <img src="icons/poa.svg" alt="power of attorny icon">
+                    <p>Aliquam semper urna tellus, sed posuere eros vestibulum pulvinar. In hac habitasse platea dictumst. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas iaculis, metus id fermentum dictum, purus arcu placerat elit, non ornare nulla ipsum vel ipsum.</p>
+                </div>
+                <div class="service trusts">
+                    <h3>Trusts</h3>
+                    <img src="icons/trusts.svg" alt="trusts icon">
+                    <p>Nunc vehicula tempor arcu, accumsan faucibus turpis placerat ornare. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                </div>
+                <div class="service wills">
+                    <h3>Wills</h3>
+                    <img src="icons/will.svg" alt="will icon">
+                    <p>Sed fringilla vel odio ac vestibulum. Morbi consectetur ligula at nulla pharetra semper. Quisque tincidunt sapien metus, eu venenatis magna varius vel. Pellentesque egestas tempor commodo. Pellentesque aliquet accumsan risus, vel tempus purus dictum eget. Phasellus ullamcorper tortor non magna auctor, eu hendrerit quam pellentesque.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section-contact">
+            <div class="contact-wrapper">
+                <h2>Need some legal help? Ask away!</h2>
+                <form method="post" action="#" class="contact-form">
+                    <div>
+                        <label for="name">Name</label>
+                    </div>
+                    <div>
+                        <input type="text" name="name" id="name" placeholder="Your name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                    </div>
+                    <div>
+                        <input type="email" name="email" id="email" placeholder="Your email" required>
+                    </div>
+                    <div>
+                        <label>Drop us a line</label>
+                    </div>
+                    <div>
+                        <textarea name="message" placeholder="Your message"></textarea>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer>
+            All rights reserved....
+        </footer>
+        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     </body>
 </html>

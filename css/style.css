@@ -1,50 +1,129 @@
+/* GENERAL */
+
+:root {
+    --purple: rgb(62, 39, 67);
+    --red: #dd3555;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    color: rgba(90, 50, 90, 0.9);
-    text-align: center;
+    color: black;
     background-color: #eeeefe;
 }
 
+section {
+    padding: 50px 0;
+}
+
+p {
+    display: inline-block;
+    line-height: 1.5;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 40px;
+}
+
+h2 {
+    width: auto;
+    font-weight: 300;
+    font-size: 25px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+span {
+    border-bottom: 2px solid #3e2743;
+}
+
+/* NAV BAR */
+
 nav {
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    color: white;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: var(--purple);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
     width: 100%;
     margin: auto;
-    padding: 20px 0px;
+    text-align: center;
 }
 
 nav a {
     box-sizing: border-box;
-    padding-bottom: 8px;
+    padding-bottom: 5px;
 }
 
-a:hover {
+nav a:hover {
     font-size: 110%;
-    color: darkred;
-    border-bottom: solid darkred 1px;
+    border-bottom: solid white 1px;
+    color: white;
 }
+
+.nav-left {
+    background: var(--purple);
+    color: white;
+    padding: 20px 0;
+}
+
+.nav-right {
+    background: var(--purple);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 100%;
+}
+
+.telephone {
+    padding: 0 15px 0 5px;
+}
+
+/* HEADER */
 
 header {
-    width: 70%;
-    margin: 30px auto;
-    padding: 30px 30px;
-
+    box-sizing: border-box;
+    display: grid;
+    color: white;
+    background: #3e2743;
+    background-image: url(../img/courtroom.jpg);
+    background-image: linear-gradient(rgba(62, 39, 67, 0.6), rgba(0, 0, 0, 0.8)), url(../img/scale.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    grid-template: repeat(5, 1fr) / 15% 1fr 15%;;
+    grid-template-areas:
+        ". . ."
+        ". . ."
+        ". sarah ."
+        ". para ."
+        ". . .";
 }
 
-.container {
+.about {
     width: 70%;
     margin: 0px auto;
     padding: 30px 30px;
-    background-color: rgba(50, 10, 50, 0.5);
-    border: solid rgba(120, 100, 100, 0.7) 1px;
-    box-shadow: 0px 2px rgba(50, 50, 50, 0.3);
-
+    color: #3e2743;
 }
 
 .sarah {
+    grid-area: sarah;
+    font-weight: bold;
     display: flex;
-    justify-content: center;
     width: 100%;
     margin: auto;
     align-items: baseline;
@@ -52,43 +131,149 @@ header {
 
 .logo-div {
     font-size: 20px;
-    font-family: cursive;
+    font-family: fantasy;
     margin-right: 30px;
-    background-color: white;
+    /*background-color: white;*/
     padding: 20px 20px;
     border: solid #333 1px;
     border-radius: 50%;
-    color: #dd3555;
+    color: white;
 
 }
 
 .sarahcressatti {
     font-weight: 300;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .tagline {
     text-align: left;
     margin: 10px 0px 0px 2px;
     font-size: 14px;
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
-.left-margin, .right-margin {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    background-color: #552222;
-    opacity: 0.7;
-    width: 20px;
+.overview {
+    grid-area: para;
+    padding-left: 5%;
 }
 
-.container img {
-    border: solid #555 1px;
-    border-radius: 50%;
-    box-shadow: -2px 1px #888;
-    text-align: left;
+/* SECTION ABOUT */
+
+.section-about {
+    /* background: #f5e9dc; */
+    background: whitesmoke;
+    width: 100%;
 }
 
-.left-margin {left: 0;}
-.right-margin{right: 0;}
+.about-card {
+    display: grid;
+    margin: auto;
+    width: 80%;
+    color: #333;
+    grid-template-columns: 10% 2fr 10% 1fr 10%;
+    /*background-color: white;*/
+    /*box-shadow: 3px 3px rgba(0, 0, 0, 0.2);*/
+}
+
+.about-description {
+    grid-column: 2;
+    padding: 10px 10px;
+}
+
+#sarah-image {
+    grid-column: 4;
+    height: 90%;
+    width: auto;
+    justify-self: center;
+    align-self: center;
+    border: 1px solid black;
+}
+
+/* SECTION SERVICES */
+
+.section-services{
+    background: #3e2743;
+    background-image: url(../img/stamp.jpg);
+    background-image: linear-gradient(rgba(62, 39, 67, 0.6), rgba(0, 0, 0, 0.8)), url(../img/stamp.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Flex for space between boxes - redo
+.services-wrapper {
+    display: flex;
+    margin: 60px auto;
+    justify-content: space-around;
+    text-align: center;
+}
+*/
+
+/* Might have to use flexbox if you want those white boxes */
+.services-wrapper {
+    display: grid;
+    width: 80%;
+    margin: 60px auto;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    grid-gap: 20px;
+    text-align: center;
+}
+
+.services-heading {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.services-wrapper img {
+    width: 30px;
+    height: auto;   
+}
+
+.section-services p {
+    font-weight: 100;
+    font-size: 11px;
+}
+
+.service {
+    background-color: white;
+    padding: 20px;
+}
+
+/* SECTION FORM */
+
+.section-contact {
+    /* background: #f5e9dc; */
+    background: whitesmoke;
+}
+
+.contact-wrapper {
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+    background: white;
+}
+
+.contact-form {
+    display: grid;
+    grid-template: repeat(3, auto) / 1fr 3fr;
+    grid-gap: 20px;
+    width: auto;
+    margin: auto;
+    padding: 20px;
+}
+
+.contact-form input, textarea {
+    width: 80%;
+    padding: 10px;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    align-items: center;
+    background-color: #3e2743;
+    color: white;
+    padding: 20px;
+    font-weight: 100;
+}
